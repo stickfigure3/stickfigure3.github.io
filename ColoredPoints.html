@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+    <style>
+        #gameCanvas {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #cookie {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 50%;
+            display: none;
+            cursor: pointer;
+            margin: 20px auto;
+        }
+        button {
+            margin: 5px;
+            padding: 10px;
+        }
+    </style>
+  </head>
+
+  <body onload="main()">
+    <img id="ROBOTHOUSE" src="Robot_and_house.jpeg" alt="Robot Sketch" width="300">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p id="num">BLANK</p>
+    <button type="button" id="green">Green</button>
+    <br>
+    <button type="button" id="red">Red</button>
+    <br>
+    <button type="button" id="clearButton">Clear</button>
+    <br>
+    <button type="button" id="drawPictureButton">Draw Picture</button>
+    <br>
+
+    <p>
+    <button type="button" id="pointButton">Point</button>
+      <br>
+    <button type="button" id="triButton">Triangle</button>
+      <br>
+    <button type="button" id="circleButton">Circle</button>
+    <br>
+
+    <p>
+    Red <input type="range" min="0" max="100" class="slider" id="redSlide">
+    <p>
+    Green <input type="range" min="0" max="100" class="slider" id="greenSlide">
+    <p>
+    Blue <input type="range" min="0" max="100" class="slider" id="blueSlide">
+    <p>
+    Size <input type="range" min="5" max="40" class="slider" id="sizeSlide">
+    <p>
+    CircleSegments <input type="range" min="5" max="40" class="slider" id="circleSeg">
+    <p>
+
+      <h1>Welcome to Cookie Clicker!</h1>
+    <p>Click the cookie to earn points. Once you have 30 cookies, you can buy an auto clicker to generate cookies automatically. Upgrade the auto clicker to speed up your earnings!</p>
+
+
+    <button id="startGameButton">Start Game</button>
+
+    <div id="gameCanvas">
+        <p id="score">Cookies: 0</p>
+        <div id="cookie"></div>
+        <button id="buyAutoClicker">Buy Auto Clicker (30 Cookies)</button>
+        <button id="upgradeAutoClicker">Upgrade Auto Clicker (50 Cookies)</button>
+    </div>
+
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="ColoredPoints.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="gameScript.js"></script>
+  </body>
+</html>
